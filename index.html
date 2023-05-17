@@ -1,16 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<title>영웅 데미지 계산기</title>
 <link rel="stylesheet" href="./css/style.css">
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://kit.fontawesome.com/db9a61c6cd.js" crossorigin="anonymous"></script>
  <meta charset="UTF-8">
- <title>css</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>영웅 데미지 계산기</title>
  <style>
-  
- </style>
-</head>
+  div { text-align: center; }
+  body {   /* 전체 테두리 크기 */
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+  #content { 
+    background-color: white;
+     border: 200px solid white;    /* 테두리 크기 */
+     border-radius: 20px;          /* 전체 테두리 라운드 */
+     border-style: transparent;
+     padding: 10px;                 /* 전체 테두리 위아래 간격 */
+     text-align: center;
+     margin-top: 100px;            /* 테두리를 위 아래로 이동 */
+   }
+   #subtitle {
+     font-size: 13px;            /* 부제목 글자 크기 */
+     margin-bottom: 15px;        /* 부제목 아래 간격 */
+     color: #5A5A5A;
+     font-weight: lighter;
+   }
+   .button {
+     border: none;
+     border-radius: 20px;         /* 버튼 라운드 */
+     color: white;
+     padding: 20px 100px;         /* 버튼 크기 */
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 22px;              /* 버튼 글자 크기 */
+     margin: 7px 10px;             /* 버튼 간 간격 */
+     cursor: pointer;
+     font-weight:bold
+   }
+   #영웅계산기-button {
+       background-color:#FFBB00
+    }
+ </style> 
+</head> 
+<body> 
+  <div class="header"><img src="./image/컴바인월드.png" width="30" class="radius_img_1">
+    <div id="title"  alt="error">컴바인 월드
+    </div>
+  </div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"> 
+  <label for="openSidebarMenu" class="sidebarIconToggle">  
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+  </label> 
+  <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li><a href="https://combine0.github.io/combine1.github.io/" target="_blank"><i class="fa-solid fa-calculator fa-xl"></i> 영웅 데미지 계산기</a></li>
+      </ul>
+      <ul class="sidebarMenuInner">
+       <li><a href="https://combine0.github.io/combine2.github.io/" target="_blank"><i class="fa-solid fa-user fa-xl"></i> 영웅 레벨업 계산기</a></li>
+      </ul>
+  </div>
+ <div id="content">
+   <div class="button-container">
+     <button class="button" id="영웅계산기-button">영웅 데미지 계산</button>
+   </div>
+ </div>
+<script>
+   document.getElementById("영웅계산기-button").addEventListener("click", function() {
+     window.location.href = "https://combine0.github.io/combine1.github.io/";
+   });
+
+        // 메뉴가 열리면 반응형 이벤트 추가
+    document.getElementById("openSidebarMenu").addEventListener("change", function() {
+    if (this.checked) {
+        // 메뉴가 열리면 오른쪽으로 밀기
+        document.getElementById("content").style.marginLeft = "250px";
+    } else {
+        // 메뉴가 닫히면 원래 위치로 다시 이동
+        document.getElementById("content").style.marginLeft = "0";
+    }
+})
+ </script>
 <body>
 </body>
 </html>

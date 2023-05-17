@@ -1,4 +1,194 @@
-
 .radius_img_1 {
     border-radius: 35%;
+    margin-left: 45px;
+    margin-top: 10px;
+    display: block;
+    position: fixed;
+}
+
+#title {                       /* 최상단 글자 */
+    font-size: 25px;             /* 제목 글자 크기 */
+    height: 100%;
+    width: 300px;
+    margin-top: 8px;
+    font-weight: bold;
+    display: block;
+    color: #05853C;
+    position: fixed;
+    
+  }
+
+#영웅계산기-button:hover {
+    background-color: #dda405;
+}
+
+.sidebarMenuInner:hover {
+    background-color: #FAECC5; 
+    border-radius: 5%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    position: sticky;
+
+}
+
+@media screen and (max-width: 480px) {
+    .button-container {
+      flex-direction: column; /* added this line */
+    }
+    .button {
+    margin-bottom: 10px; /* added this line */
+    }
+  }
+  .menu ::before{
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    background: #fff; /* 최상단에 배경 맞추기*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {            /* 최상단 배경 */
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #fff;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.main {                /* 최상단 배경 */
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{           /* 최상단 배경 */
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {   /* 사이드바 메뉴  */
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: #FFF;
+}
+.sidebarMenuInner{ /* 사이드바 메뉴 목록 글자 간격 */
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{  /* 사이드바 메뉴 목록 글자 크기 */
+    list-style: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li a{ /* 사이드바 메뉴 목록 글자 색 */
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle { /* 메뉴 설정 */
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {      /* 메뉴 설정 */
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #05853C;
+}
+.horizontal {  
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
 }
