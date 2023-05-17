@@ -1,4 +1,4 @@
-.radius_img_1 {
+.radius_img_1 {                /* 최상단 이미지 설정 */
     border-radius: 35%;
     margin-left: 45px;
     margin-top: 10px;
@@ -6,7 +6,7 @@
     position: fixed;
 }
 
-#title {                       /* 최상단 글자 */
+#title {                       /* 최상단 글자 설정 */
     font-size: 25px;             /* 제목 글자 크기 */
     height: 100%;
     width: 300px;
@@ -14,46 +14,46 @@
     font-weight: bold;
     display: block;
     color: #05853C;
-    position: fixed;
-    
   }
-
-#영웅계산기-button:hover {
+#영웅계산기-button:hover {            /* 계산 버튼 설정 */
     background-color: #dda405;
 }
 
-.sidebarMenuInner:hover {
+.sidebarMenuInner:hover {             /* 메뉴 하위 버튼 설정 */
     background-color: #FAECC5; 
     border-radius: 5%;
 }
 
-@media screen and (max-width: 700px) {
-    .button-container {
-     flex-direction: column;
-     align-items: center;
-     width: 100%;
+.button {
+    font-size: 25px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: #FFBB00;
+    margin-left: 0px;
+    margin-top: 300px;
+    display: inline-block;
+    white-space: nowrap;
+    flex-grow: 1;
   }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .button-container {
+      padding: 0.8rem;
+      font-size: 20px;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .button { /* 버튼 설정 */
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 22px; /* 버튼 글자 크기 */ 
-     border: none;
-     border-radius: 20px;         /* 버튼 라운드 */
-     color: white;
-     padding: 1rem;         /* 버튼 크기 */
-     align-items: center;
-     width: 100%;
-     background-color:#FFBB00
-    }
-  .menu ::before{
-    font-family: 'Material Icons';
-    font-size: 1.5em;
-    float: left;
-    clear: left;
-}
-
+  }
+  
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 html, body {
     overflow-x: hidden;
