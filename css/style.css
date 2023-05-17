@@ -43,7 +43,6 @@
      border-radius: 20px;         /* 버튼 라운드 */
      color: white;
      padding: 1rem;         /* 버튼 크기 */
-     flex-direction: column;
      align-items: center;
      width: 100%;
      background-color:#FFBB00
