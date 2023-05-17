@@ -27,20 +27,26 @@
     border-radius: 5%;
 }
 
-.button-container {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    position: sticky;
-
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
     .button-container {
-      flex-direction: column; /* added this line */
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+  }
     }
-    .button {
-    margin-bottom: 10px; /* added this line */
+    .button { /* 버튼 설정 */
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 22px; /* 버튼 글자 크기 */ 
+     border: none;
+     border-radius: 20px;         /* 버튼 라운드 */
+     color: white;
+     padding: 1rem;         /* 버튼 크기 */
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     background-color:#FFBB00
     }
   }
   .menu ::before{
